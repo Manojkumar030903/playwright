@@ -34,7 +34,11 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
+h1:hover {
+  color: #747bff;
+  font-size: larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} 
 button {
   border-radius: 8px;
   border: 1px solid transparent;

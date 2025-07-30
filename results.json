@@ -103,7 +103,7 @@
           "column": 6,
           "specs": [
             {
-              "title": "modify request",
+              "title": "loads page without css",
               "ok": true,
               "tags": [],
               "tests": [
@@ -111,19 +111,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
                   "results": [
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 1043,
+                      "duration": 3719,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T11:36:32.552Z",
+                      "startTime": "2025-07-30T05:05:25.442Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -131,13 +131,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "8ca3405d9dab32c0af72-35be8972bf0df85ff2c3",
+              "id": "8ca3405d9dab32c0af72-652bb85fd94097b7b820",
               "file": "network.test.ts",
-              "line": 25,
-              "column": 1
+              "line": 7,
+              "column": 3
             },
             {
-              "title": "abort request",
+              "title": "network request",
               "ok": true,
               "tags": [],
               "tests": [
@@ -145,19 +145,19 @@
                   "timeout": 30000,
                   "annotations": [],
                   "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
+                  "projectId": "chrome",
+                  "projectName": "chrome",
                   "results": [
                     {
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 1364,
+                      "duration": 869,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T11:36:32.614Z",
+                      "startTime": "2025-07-30T05:05:25.413Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -165,251 +165,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "8ca3405d9dab32c0af72-502b4c318b870aabcde7",
+              "id": "8ca3405d9dab32c0af72-5853ccd1dca60f1bc5e7",
               "file": "network.test.ts",
-              "line": 35,
-              "column": 1
-            },
-            {
-              "title": "modify response",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
-                      "status": "passed",
-                      "duration": 1386,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-29T11:36:32.563Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8ca3405d9dab32c0af72-7a6d90bc48acd04711e6",
-              "file": "network.test.ts",
-              "line": 41,
-              "column": 1
-            },
-            {
-              "title": "advanced user interactions demo",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "firefox",
-                  "projectName": "firefox",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "parallelIndex": 3,
-                      "status": "timedOut",
-                      "duration": 30020,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\iyyntech\\Desktop\\Network-test\\Net-test\\tests\\network.test.ts",
-                            "column": 14,
-                            "line": 95
-                          },
-                          "message": "Error: page.focus: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('Mock')\u001b[22m\n\n\n\u001b[0m \u001b[90m 93 |\u001b[39m   \n \u001b[90m 94 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mhover(\u001b[32m'text=N'\u001b[39m)\u001b[33m;\u001b[39m \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfocus(\u001b[32m'Mock'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"file\"]'\u001b[39m)\u001b[33m.\u001b[39mblur()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m\n \u001b[90m 98 |\u001b[39m   \u001b[90m// 8. Dialogs\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\iyyntech\\Desktop\\Network-test\\Net-test\\tests\\network.test.ts:95:14\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-29T11:36:32.612Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\iyyntech\\Desktop\\Network-test\\Net-test\\test-results\\network-Network-Tests-advanced-user-interactions-demo-firefox\\error-context.md"
-                        }
-                      ]
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "8ca3405d9dab32c0af72-7b2c6b741d927429936e",
-              "file": "network.test.ts",
-              "line": 56,
-              "column": 1
-            },
-            {
-              "title": "modify request",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
-                      "status": "passed",
-                      "duration": 235,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-29T11:36:32.614Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8ca3405d9dab32c0af72-49028c89ce64456207f1",
-              "file": "network.test.ts",
-              "line": 25,
-              "column": 1
-            },
-            {
-              "title": "abort request",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
-                      "status": "passed",
-                      "duration": 258,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-29T11:36:32.577Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8ca3405d9dab32c0af72-7a6c5974b4ff2ec543e6",
-              "file": "network.test.ts",
-              "line": 35,
-              "column": 1
-            },
-            {
-              "title": "modify response",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 5,
-                      "parallelIndex": 5,
-                      "status": "passed",
-                      "duration": 207,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-29T11:36:32.914Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "8ca3405d9dab32c0af72-19df960d4c43312a17b3",
-              "file": "network.test.ts",
-              "line": 41,
-              "column": 1
-            },
-            {
-              "title": "advanced user interactions demo",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "webkit",
-                  "projectName": "webkit",
-                  "results": [
-                    {
-                      "workerIndex": 4,
-                      "parallelIndex": 4,
-                      "status": "timedOut",
-                      "duration": 30012,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\iyyntech\\Desktop\\Network-test\\Net-test\\tests\\network.test.ts",
-                            "column": 14,
-                            "line": 94
-                          },
-                          "message": "Error: page.hover: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('text=N')\u001b[22m\n\u001b[2m    - waiting for navigation to finish...\u001b[22m\n\n\n\u001b[0m \u001b[90m 92 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m'load'\u001b[39m)\u001b[33m;\u001b[39m \n \u001b[90m 93 |\u001b[39m   \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 94 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mhover(\u001b[32m'text=N'\u001b[39m)\u001b[33m;\u001b[39m \n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 95 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfocus(\u001b[32m'Mock'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 96 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"file\"]'\u001b[39m)\u001b[33m.\u001b[39mblur()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\iyyntech\\Desktop\\Network-test\\Net-test\\tests\\network.test.ts:94:14\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-07-29T11:36:32.931Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "8ca3405d9dab32c0af72-5ca396af0954dcd2f941",
-              "file": "network.test.ts",
-              "line": 56,
+              "line": 10,
               "column": 1
             },
             {
@@ -425,15 +183,15 @@
                   "projectName": "chrome",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 5,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 131,
+                      "duration": 487,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T11:36:34.179Z",
+                      "startTime": "2025-07-30T05:05:25.415Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -443,7 +201,7 @@
               ],
               "id": "8ca3405d9dab32c0af72-9d385f84575b616bb982",
               "file": "network.test.ts",
-              "line": 25,
+              "line": 19,
               "column": 1
             },
             {
@@ -459,15 +217,15 @@
                   "projectName": "chrome",
                   "results": [
                     {
-                      "workerIndex": 7,
-                      "parallelIndex": 0,
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
                       "status": "passed",
-                      "duration": 106,
+                      "duration": 483,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T11:36:36.403Z",
+                      "startTime": "2025-07-30T05:05:25.427Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -477,7 +235,7 @@
               ],
               "id": "8ca3405d9dab32c0af72-2574a4d3ea03087b0813",
               "file": "network.test.ts",
-              "line": 35,
+              "line": 29,
               "column": 1
             },
             {
@@ -493,15 +251,15 @@
                   "projectName": "chrome",
                   "results": [
                     {
-                      "workerIndex": 6,
-                      "parallelIndex": 5,
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
                       "status": "passed",
-                      "duration": 83,
+                      "duration": 483,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T11:36:34.446Z",
+                      "startTime": "2025-07-30T05:05:25.414Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -511,12 +269,12 @@
               ],
               "id": "8ca3405d9dab32c0af72-3bfe88e85bef69895744",
               "file": "network.test.ts",
-              "line": 41,
+              "line": 35,
               "column": 1
             },
             {
-              "title": "advanced user interactions demo",
-              "ok": false,
+              "title": "advanced user interactions ",
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -527,47 +285,29 @@
                   "projectName": "chrome",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 5,
                       "parallelIndex": 5,
-                      "status": "timedOut",
-                      "duration": 30016,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
+                      "status": "passed",
+                      "duration": 28146,
+                      "errors": [],
+                      "stdout": [
                         {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "C:\\Users\\iyyntech\\Desktop\\Network-test\\Net-test\\tests\\network.test.ts",
-                            "column": 14,
-                            "line": 95
-                          },
-                          "message": "Error: page.focus: Test ended.\nCall log:\n\u001b[2m  - waiting for locator('Mock')\u001b[22m\n\n\n\u001b[0m \u001b[90m 93 |\u001b[39m   \n \u001b[90m 94 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mhover(\u001b[32m'text=N'\u001b[39m)\u001b[33m;\u001b[39m \n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 95 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfocus(\u001b[32m'Mock'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 96 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"file\"]'\u001b[39m)\u001b[33m.\u001b[39mblur()\u001b[33m;\u001b[39m\n \u001b[90m 97 |\u001b[39m\n \u001b[90m 98 |\u001b[39m   \u001b[90m// 8. Dialogs\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\iyyntech\\Desktop\\Network-test\\Net-test\\tests\\network.test.ts:95:14\u001b[22m"
+                          "text": "Dialog message: I am a JS prompt\n"
                         }
                       ],
-                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-07-29T11:36:34.541Z",
+                      "startTime": "2025-07-30T05:05:25.446Z",
                       "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\iyyntech\\Desktop\\Network-test\\Net-test\\test-results\\network-Network-Tests-advanced-user-interactions-demo-chrome\\error-context.md"
-                        }
-                      ]
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
-              "id": "8ca3405d9dab32c0af72-5fc6f3670693d367e46a",
+              "id": "8ca3405d9dab32c0af72-996e5b9bf93911d83b67",
               "file": "network.test.ts",
-              "line": 56,
+              "line": 50,
               "column": 1
             }
           ]
@@ -577,11 +317,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-07-29T11:36:31.445Z",
-    "duration": 36555.06,
-    "expected": 9,
+    "startTime": "2025-07-30T05:05:23.922Z",
+    "duration": 30848.259000000005,
+    "expected": 6,
     "skipped": 0,
-    "unexpected": 3,
+    "unexpected": 0,
     "flaky": 0
   }
 }

@@ -4,24 +4,18 @@ test.beforeEach(async ({ context }) => {
   await context.route(/.css$/, route => route.abort());
 });
 test.describe('Network Tests', () => {
-//   test('loads page without css', async ({ page }) => {
-//     await page.goto('https://playwright.dev');
-//   });
-// test('network request',async ({page})=>{
-//   page.on('request', request => 
-//     console.log('>>', request.method(), request.url()));
+  test('loads page without css', async ({ page }) => {
+    await page.goto('https://playwright.dev');
+  });
+test('network request', async ({ page }) => {
+  const [response] = await Promise.all([
+    page.waitForResponse('https://jsonplaceholder.typicode.com/posts/1'),
+    page.evaluate(() => fetch('https://jsonplaceholder.typicode.com/posts/1')),
+  ]);
 
-//   page.on('response', response => 
-//     console.log('<<', response.status(), response.url()));
-// await page.goto('https://example.com');
+  expect(response.status()).toBe(200);
+});
 
-// const responsePromise = page.waitForResponse('**/api/fetch_data');
-// const response = await responsePromise;
-
-// expect('Example Domain').toBe(response.statusText());
-// console.log('Response status:', response.status());
-
-// })
 test('modify request',async ({page})=>{
 await page.route('**/*', async route => {
   const headers = route.request().headers();
@@ -53,8 +47,8 @@ await page.route('**/title.html', async route => {
   });
 });
 });
-test('advanced user interactions demo', async ({ browser }) => {
-  // 1. HTTP Authentication
+test('advanced user interactions ', async ({ browser }) => {
+ 
   const context = await browser.newContext({
     httpCredentials: {
       username: 'admin',
@@ -87,30 +81,32 @@ test('advanced user interactions demo', async ({ browser }) => {
   const fileChooser = await fileChooserPromise;
   await fileChooser.setFiles('C:\\Users\\iyyntech\\Desktop\\Network-test\\Net-test\\tests\\testfile.txt'); 
 
-
-  await page.goto('https://file-examples.com/index.php/sample-documents-download/');
-await page.waitForLoadState('load'); 
+await page.goto('https://file-examples.com/index.php/sample-documents-download/');
+  await page.waitForLoadState('load');
   
-  await page.hover('text=N'); 
-  await page.focus('Mock');
-  await page.locator('input[type="file"]').blur();
-
-  // 8. Dialogs
   await page.goto('https://the-internet.herokuapp.com/javascript_alerts');
   page.once('dialog', async dialog => {
     console.log('Dialog message:', dialog.message());
-    await dialog.accept('Playwright');
+    await dialog.accept('Playwright'); 
   });
-  await page.click('button[onclick="jsPrompt()"]');
+ await page.click('button[onclick="jsPrompt()"]'); 
   
 
- 
-  await page.hover('a'); 
-  await page.click('a', { button: 'right' }); 
+  await page.goto('http://localhost:5173/');
+  await page.waitForLoadState('domcontentloaded');
+
+  await page.hover('text=Vite'); // hover over 'Vite' text
+
+ await page.click('button:text-matches("^count is \\\\d+$", "i")', { button: 'right' }); // ✅ Correct
+
+
+  // Type into the page
   await page.keyboard.type('Testing chain');
   await page.keyboard.press('Enter');
 
+  // 4. Cleanly close context and browser
   await context.close();
+  await browser.close();
   
 });
 
